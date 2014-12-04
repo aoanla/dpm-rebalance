@@ -603,6 +603,7 @@ def sequenceMoves(consolidatedActions, filesystems, maxreads, maxwrites, sparede
  
 def annotateFreeSpace(fss):
   """Find out the free space on the given filesystems, via an SSH call.  Returns a (potentially reduced) set of filesystems that we know are abel to recieve data."""
+  #NOTE: this should be adjusted to get information via parsing dpm-qryconf or equiv (assuming enough resolution available)
   ret = list()
   fsInfo = dict()
   fails = set()
