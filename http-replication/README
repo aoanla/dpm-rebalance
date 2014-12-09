@@ -1,3 +1,7 @@
 Wiki is available at:
 
 https://svnweb.cern.ch/trac/lcgdm/wiki/Dpm/Dev/Recipes/HttpReplication
+
+sample request:
+
+./pool-fs-select-test-pycurl.py --querystring "?pool=pool01&filesystem=dpmdisk01.cern.ch:/srv/dpm/01&replicate" --head dpmhead01.cern.ch -E /root/globus/userkey.pem /dpm/cern.ch/home/dteam/new.txt
