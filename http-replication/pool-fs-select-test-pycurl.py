@@ -61,14 +61,11 @@ c.perform()
 print res.headers()
 
 dest_redir_location = res.headers()['Location']
+dest_redir_location = urllib.unquote(dest_redir_location)
 print 'DESTINATION phys location', dest_redir_location
 print
 if args.testing:
   sys.exit(0)
-
-# fix redir_location
-dest_redir_location = urllib.unquote(dest_redir_location)
-print 'DESTINATION phys location', dest_redir_location
 
 res2 = Response()
 c.setopt(c.SSLCERT, certificate)
